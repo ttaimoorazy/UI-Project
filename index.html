@@ -1,0 +1,127 @@
+<html ng-app="myApp">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
+
+    <body ng-controller="HomeCtrl" class="parent">
+        
+        <div class="pen-title">
+  <h1>Material Login Form</h1>
+</div>
+<div class="container">
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">Login</h1>
+    <form>
+<!--    Slider input Copy this    -->
+      <div class="input-container">
+        <input type="range" min="0" max="5" step="1" id="videos" name="videos" ng-model="numVideos" class="surprise-slider">
+        <label for="videos">videos {{numVideos}}</label>
+        <div class="bar"></div>
+      </div>
+<!--    Slider input Copy this Ends   -->
+      <div class="input-container">
+        <input type="password" id="Password" required="required"/>
+        <label for="Password">Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button><span>Go</span></button>
+      </div>
+      <div class="footer"><a href="#">Forgot your password?</a></div>
+    </form>
+  </div>
+  <div class="card alt">
+    <div class="toggle"></div>
+    <h1 class="title">Register
+      <div class="close"></div>
+    </h1>
+    <form>
+      <div class="input-container">
+        <input type="text" id="Username" required="required"/>
+        <label for="Username">Username</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="Password" required="required"/>
+        <label for="Password">Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="Repeat Password" required="required"/>
+        <label for="Repeat Password">Repeat Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button><span>Next</span></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+      <div class="form">
+        <div data-tag="videos" class="sample">
+          <input type="text" id="videos" name="videos" ng-model="numVideos">
+        </div>
+        <br>
+        <input type="text" id="photos" required="photos" ng-model="numPhotos">
+        <label for="photos">photos</label>
+        <br>
+        <input type="text" id="buttons" name="buttons">
+        <label for="buttons">buttons</label>
+        <br>
+        <input type="text" id="icons" name="icons">
+        <label for="icons">icons</label>
+        <br>
+        <input type="text" id="text" name="text">
+        <label for="text">text</label>
+        <br>
+        <input type="submit" value="submit" ng-click="submit()">
+      </div>
+    <!--   <input ng-model="numButtons" /> -->
+      <div class="frames">
+        <div class="frame frame1">
+        
+          <div class="video-container">
+            <div 
+              ng-repeat="video in videos" 
+              class="videos">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/V5oCAf6mwMA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+
+
+          <div class="photo-container">
+            <div 
+              ng-repeat="photo in photos" 
+              class="photos">
+              Photo
+            </div>
+          </div>
+        </div>
+      
+        <div class="frame frame1">
+          <div class="video-container">
+            <div 
+              ng-repeat="video in videos" 
+              class="videos">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/V5oCAf6mwMA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+
+
+          <div class="photo-container">
+            <div 
+              ng-repeat="photo in photos" 
+              class="photos">
+              Photo
+            </div>
+          
+          </div>
+        </div>
+      
+      </div>
+      
+    </body>
